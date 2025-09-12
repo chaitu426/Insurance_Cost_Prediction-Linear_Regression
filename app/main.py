@@ -179,7 +179,7 @@ def main():
     initial_sidebar_state="expanded"
   )
   
-  with open("regration_projects/app/style.css") as f:
+  with open("app/style.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
   
   input_data = add_sidebar()
