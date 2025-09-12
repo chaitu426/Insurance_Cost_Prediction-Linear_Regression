@@ -7,7 +7,7 @@ import numpy as np
 
 
 def get_clean_data():
-  data = pd.read_csv("regration_projects/decisionTree/cancer.csv")
+  data = pd.read_csv("decisionTree/cancer.csv")
   
   data = data.drop(['Unnamed: 32', 'id'], axis=1)
   
@@ -140,8 +140,8 @@ def get_radar_chart(input_data):
 
 
 def add_predictions(input_data):
-    model = joblib.load("regration_projects/logistic_regration/log_reg_model.pkl")
-    scaler = joblib.load("regration_projects/logistic_regration/scaler.pkl")
+    model = joblib.load("logistic_regration/log_reg_model.pkl")
+    scaler = joblib.load("logistic_regration/scaler.pkl")
 
     # Make DataFrame with correct column order
     data = get_clean_data()
